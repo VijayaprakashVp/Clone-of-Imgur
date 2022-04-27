@@ -31,11 +31,14 @@ function tagsDisplay(tags) {
     if (el.images) {
       if (el.images[0].type === "image/jpeg") {
         let div = document.createElement("div");
+
         let image = document.createElement("img");
         image.src = el.images[0].link;
+
         let h4 = document.createElement("h4");
         h4.textContent = el.title;
         h4.setAttribute("class", "name");
+
         div.append(image, h4);
         div_one.append(div);
       } else if (el.images[0].type === "video/mp4") {
@@ -45,11 +48,14 @@ function tagsDisplay(tags) {
       }
     } else if (el.link) {
       let div = document.createElement("div");
+
       let image = document.createElement("img");
       image.src = el.link;
+
       let h4 = document.createElement("h4");
       h4.textContent = el.title;
       h4.setAttribute("class", "name");
+
       div.append(image, h4);
       div_one.append(div);
     }
